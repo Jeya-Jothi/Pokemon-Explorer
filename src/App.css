@@ -1,38 +1,118 @@
-.App {
+body {
+  margin: 0;
   text-align: center;
+  background: linear-gradient(-45deg, #ffecd2,rgb(254, 207, 191),rgb(251, 173, 151),rgb(200, 220, 251), #c2e9fb,rgb(235, 252, 194),rgb(202, 248, 208));
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.fixed-header{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  text-align: center;
+  backdrop-filter: blur(2px); /* smooth blur effect */}
+
+header {
+  background: linear-gradient(-45deg, #ffecd2,rgb(254, 207, 191),rgb(251, 173, 151),rgb(248, 161, 110),rgb(251, 194, 228),rgb(252, 252, 194),rgb(193, 252, 201));
+  background-size: 600% 600%;
+  animation: gradientShift 15s ease infinite;
+  padding: 20px;
+  color: black;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  margin-bottom:20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.search-input {
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 250px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.filter-dropdown {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.pokemon-grid {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
+  padding: 20px;
+  margin-top:150px;
 }
 
-.App-link {
-  color: #61dafb;
+.pokemon-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 15px;
+  width: 160px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pokemon-card:hover {
+  transform: scale(1.05);
+}
+
+.pokemon-image {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.status-message {
+  padding: 50px;
+  color: #444;
+}
+
+.empty-message {
+  font-size: 18px;
+  color: #777;
+}
+
+@media (max-width: 600px) {
+  .search-input, .filter-dropdown {
+    width: 50%;
+    margin-bottom: 10px;
   }
-  to {
-    transform: rotate(360deg);
+  .pokemon-card {
+    width: 120px;
+    padding: 5px;
+  }
+  .pokemon-grid{
+    margin-top:200px;
+    padding: 10px;
+  }
+  .pokemon-image {
+    width: 70px;
+    height: 70px;
   }
 }
+

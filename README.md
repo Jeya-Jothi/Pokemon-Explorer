@@ -1,3 +1,38 @@
+# Pokémon Explorer
+
+**Pokémon Explorer** is a React application that lets users explore Pokémon by filtering them by type and searching by name. It’s built using functional components, hooks, and clean modular code.
+
+---
+
+## Features
+
+-  Search Pokémon by name
+-  Filter Pokémon by type (grass, fire, water, etc.)
+-  View individual Pokémon cards with ID, type, and image
+-  Error message display if data fails to load
+
+---
+
+## Tech Stack
+
+- **React** (bootstrapped with Create React App)
+- **JavaScript (ES6+)**
+- **CSS**
+- **PokéAPI** for fetching live Pokémon data *(if applicable)*
+
+---
+
+## Project Structure (Simplified)
+
+
+---
+
+## About the Author
+
+Developed by **Jothi** – an aspiring web developer who loves clean UI, creative coding, and building interactive front-end applications.
+
+---
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -8,23 +43,23 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
+The page will reload when you make changes.  
 You may also see any lint errors in the console.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.  
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `build` folder.  
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames include the hashes.  
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
